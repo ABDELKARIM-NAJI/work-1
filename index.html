@@ -1,30 +1,61 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!doctype html>
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mon cv digital </title>
-    <link rel="stylesheet" href="styles.css">
-<link rel="shortcut icon" href="src/DSC_9240 copie.jpg" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio — Abdelkarim Naji</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="src/DSC_9240 copie.jpg" type="image/x-icon">
 </head>
-
 <body>
-    <nav>
-        <div>
+    <header class="site-header">
+        <nav class="nav container">
+            <a class="logo" href="#home">Abdelkarim Naji</a>
             <ul class="nav-links">
-                <li><a href="/src/about.html">about</a></li>
-                <li><a href="/src/contact.html">contact</a></li>
-                <li><a href="/src/home.html">home</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-        </div>
-    </nav>
-    <center><img src="src/DSC_9240 copie.jpg" width="200"></center>
-    <p><sup>je suis abdelkarim naji</sup>j'ai <del>27ans </del><small>j'ai eu mon diplome en OFPPT en 2018</small>
-        <mark>et pour finir</mark><sub> le parcours </sub> <q> j'ai pris ma licence </q><mark>merci pour votre
-            attention</mark></p>      
+            <button id="theme-toggle" class="theme-toggle" aria-label="Basculer le thème">🌙</button>
+        </nav>
+    </header>
 
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content container">
+                <p class="hello">Bonjour, je suis</p>
+                <h1 class="hero-name">Abdelkarim Naji</h1>
+                <p class="hero-sub">Développeur web — Créatif & passionné</p>
+                <div class="hero-cta">
+                    <a class="btn" href="#projects">Voir mes projets</a>
+                    <a class="btn ghost" href="#contact">Me contacter</a>
+                </div>
+            </div>
+        </section>
 
+        <section id="about" class="section about container">
+            <h2>À propos</h2>
+            <p>Je m'appelle Abdelkarim Naji. Je crée des sites web modernes et accessibles. (Texte exemple — personnalisez-le.)</p>
+        </section>
+
+        <section id="projects" class="section projects container">
+            <h2>Projets</h2>
+            <div class="project-grid">
+                <article class="project">Projet 1 — description courte</article>
+                <article class="project">Projet 2 — description courte</article>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact container">
+            <h2>Contact</h2>
+            <p>Envoyez-moi un message : <a href="mailto:abdelkarim@example.com">abdelkarim@example.com</a></p>
+        </section>
+    </main>
+
+    <footer class="site-footer container">
+        <p>© <span id="year"></span> Abdelkarim Naji</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
-
 </html>
