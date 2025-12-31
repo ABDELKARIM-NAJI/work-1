@@ -79,3 +79,57 @@ body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica
 	.hero::before, .project::before, .edu-card, .edu-card.reveal{animation:none;transition:none}
 	.edu-card:hover{transform:none}
 }
+
+/* Design improvements: variables, layout, typography, buttons, cards */
+:root{
+	--radius:12px;
+	--gap:16px;
+	--section-pad:56px;
+	--transition:200ms;
+	--muted-2:#9ca3af;
+}
+
+/* Typography tweaks */
+h2{font-size:1.6rem;margin:0 0 12px;color:var(--text);letter-spacing:0.2px}
+.section{padding:var(--section-pad) 0}
+.hello{font-weight:600}
+
+/* Hero layout: side-by-side on wide screens, stacked on small */
+.hero{min-height:62vh;display:grid;grid-template-columns:1fr 240px;align-items:center;gap:32px}
+.hero-content{padding:28px 0}
+.hero-avatar{width:180px;height:180px;border-radius:14px;object-fit:cover;margin:8px 0;border:6px solid #fff;box-shadow:0 18px 36px rgba(16,24,40,0.06);display:block}
+
+/* Buttons: nicer hover & focus */
+.btn{transition:transform var(--transition) ease, box-shadow var(--transition) ease;background:var(--accent);box-shadow:0 8px 20px rgba(37,99,235,0.08)}
+.btn:hover{transform:translateY(-4px);box-shadow:0 18px 36px rgba(37,99,235,0.12)}
+.btn:focus{outline:3px solid var(--shape-accent);outline-offset:6px}
+.btn.ghost{background:transparent;border:1px solid rgba(0,0,0,0.06)}
+
+/* Card improvements */
+.project, .edu-card{overflow:hidden;border-radius:var(--radius);transition:transform .22s cubic-bezier(.2,.9,.3,1),box-shadow .22s ease}
+.project:hover, .edu-card:hover{transform:translateY(-6px);box-shadow:0 20px 46px rgba(16,24,40,0.08)}
+.project{padding:18px}
+
+/* Subtle muted text */
+.subtle, .edu-sub{color:var(--muted-2);font-size:.95rem}
+
+/* Utility spacing */
+.row{display:flex;gap:var(--gap);align-items:center}
+.center{display:flex;align-items:center;justify-content:center}
+
+/* Responsive tweaks */
+@media (max-width:900px){
+	.hero{grid-template-columns:1fr}
+	.hero-avatar{width:150px;height:150px;margin:16px auto}
+	.hero-content{text-align:center}
+	.nav-links{gap:10px}
+}
+
+@media (max-width:500px){
+	.hero-avatar{width:110px;height:110px}
+}
+
+/* Final accessibility additions */
+a:focus{outline:3px solid var(--shape-accent);outline-offset:6px}
+
+/* End of improvements */
