@@ -45,3 +45,37 @@ body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica
 	.hero-name{font-size:2.2rem}
 	.nav-links{display:none}
 }
+
+/* Education & decorative shapes */
+:root{--shape-color:rgba(239,68,68,0.06);--shape-accent:rgba(239,68,68,0.09);--shape-small:25px;}
+.hero{position:relative;overflow:visible}
+.hero::before{
+	content:"";position:absolute;right:-10px;top:8%;width:100px;height:100px;
+	background:var(--shape-color);transform:rotate(12deg);z-index:0;border-radius:12px;animation:bob 6s ease-in-out infinite;box-shadow:0 12px 28px rgba(16,24,40,0.04)
+}
+.hero::after{
+	content:"";position:absolute;right:-50px;top:22%;width:var(--shape-small);height:var(--shape-small);background:var(--shape-accent);transform:rotate(-10deg);border-radius:6px;z-index:0;animation:bob 6s ease-in-out infinite;box-shadow:0 6px 14px rgba(16,24,40,0.03)
+} 
+@keyframes bob{0%{transform:translateY(0) rotate(12deg)}50%{transform:translateY(6px) rotate(14deg)}100%{transform:translateY(0) rotate(12deg)}}
+.hero-content{position:relative;z-index:1}
+.hero-avatar{width:120px;height:120px;border-radius:12px;object-fit:cover;margin:16px 0;border:4px solid #fff;box-shadow:0 8px 24px rgba(16,24,40,0.08);display:block}
+.project{position:relative;overflow:visible}
+.project::before{content:"";position:absolute;left:-12px;bottom:-12px;width:var(--shape-small);height:var(--shape-small);background:var(--shape-accent);opacity:0.12;transform:rotate(6deg);border-radius:4px;transition:transform .3s ease} 
+.project:hover::before{transform:rotate(15deg) translateY(-6px)}
+.education-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:16px}
+.edu-card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 20px rgba(16,24,40,0.04);position:relative;transition:transform .18s ease,box-shadow .18s ease}
+.edu-card.reveal{opacity:0;transform:translateY(10px);transition:opacity .6s ease,transform .6s ease}
+.edu-card.visible{opacity:1;transform:none}
+.edu-card:hover{transform:translateY(-6px);box-shadow:0 18px 36px rgba(16,24,40,0.08)}
+.edu-card:focus, .edu-card:focus-within{outline:3px solid var(--shape-accent);outline-offset:6px;border-radius:12px}
+.edu-card::after{content:"";position:absolute;right:-10px;top:-10px;width:var(--shape-small);height:var(--shape-small);background:var(--shape-accent);transform:rotate(12deg);border-radius:4px;box-shadow:0 6px 12px rgba(16,24,40,0.03)}
+.edu-sub{color:var(--muted);margin:6px 0}
+@media (max-width:500px){
+	.hero-avatar{width:96px;height:96px}
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce){
+	.hero::before, .project::before, .edu-card, .edu-card.reveal{animation:none;transition:none}
+	.edu-card:hover{transform:none}
+}
