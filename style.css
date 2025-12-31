@@ -133,4 +133,10 @@ h2{font-size:1.6rem;margin:0 0 12px;color:var(--text);letter-spacing:0.2px}
 /* Final accessibility additions */
 a:focus{outline:3px solid var(--shape-accent);outline-offset:6px}
 
+/* Back to top button */
+.back-to-top{position:fixed;right:24px;bottom:24px;width:44px;height:44px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:var(--accent);color:#fff;box-shadow:0 10px 24px rgba(37,99,235,0.18);border:none;cursor:pointer;opacity:0;transform:translateY(8px);transition:opacity .2s ease, transform .2s ease;z-index:999}
+.back-to-top.show{opacity:1;transform:none}
+.back-to-top:focus{outline:3px solid var(--shape-accent);outline-offset:6px}
+.back-to-top[aria-hidden="true"]{pointer-events:none}
+
 /* End of improvements */

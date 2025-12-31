@@ -34,4 +34,21 @@ document.addEventListener('DOMContentLoaded', function(){
     entries.forEach(en=>{ if(en.isIntersecting) en.target.classList.add('visible'); });
   },{threshold:0.12});
   document.querySelectorAll('.reveal, .project, .section').forEach(el=>io.observe(el));
+
+  // Back to top button
+  const backBtn = document.getElementById('back-to-top');
+  if(backBtn){
+    const toggleBack = ()=>{
+      if(window.scrollY > 300){
+        backBtn.classList.add('show');
+        backBtn.setAttribute('aria-hidden','false');
+      } else {
+        backBtn.classList.remove('show');
+        backBtn.setAttribute('aria-hidden','true');
+      }
+    };
+    toggleBack();
+    window.addEventListener('scroll', toggleBack, {passive:true});
+    backBtn.addEventListener('click', ()=> window.scrollTo({top:0, behavior:'smooth'}));
+  }
 });
