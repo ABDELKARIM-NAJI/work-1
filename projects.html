@@ -7,10 +7,12 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Aller au contenu</a>
   <header class="site-header">
-    <nav class="nav container">
+    <nav class="nav container" role="navigation" aria-label="Navigation principale">
       <a class="logo" href="index.html">Abdelkarim Naji</a>
-      <ul class="nav-links">
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Ouvrir le menu">☰</button>
+      <ul id="primary-navigation" class="nav-links">
         <li><a href="home.html">Accueil</a></li>
         <li><a href="about.html">À propos</a></li>
         <li><a href="projects.html" aria-current="page">Projets</a></li>
@@ -35,6 +37,6 @@
 
   <button id="back-to-top" class="back-to-top" aria-label="Retour en haut" aria-hidden="true">↑</button>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
