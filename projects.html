@@ -5,21 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Projets — Abdelkarim Naji</title>
   <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss"></style>
+  <script>
+    (async function(){
+      try{
+        const r = await fetch('taailwinds.css');
+        if(!r.ok) return console.warn('Impossible de charger taailwinds.css');
+        const txt = await r.text();
+        const s = document.querySelector('style[type="text/tailwindcss"]');
+        if(s) s.textContent = txt;
+      }catch(e){console.warn('Erreur chargement taailwinds.css', e)}
+    })();
+  </script>
+  </head>
+  <body class="bg-gray-50 text-slate-900 font-sans antialiased">
   <a class="skip-link" href="#main-content">Aller au contenu</a>
-  <header class="site-header">
-    <nav class="nav container" role="navigation" aria-label="Navigation principale">
-      <a class="logo" href="index.html">Abdelkarim Naji</a>
-      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Ouvrir le menu">☰</button>
-      <ul id="primary-navigation" class="nav-links">
-        <li><a href="home.html">Accueil</a></li>
-        <li><a href="about.html">À propos</a></li>
-        <li><a href="projects.html" aria-current="page">Projets</a></li>
-        <li><a href="education.html">Éducation</a></li>
-        <li><a href="contact.html">Contact</a></li>
+  <header class="site-header bg-white/60 backdrop-blur py-2 sticky top-0 z-50 border-b">
+    <nav class="nav container flex items-center justify-between gap-4 max-w-4xl mx-auto px-4" role="navigation" aria-label="Navigation principale">
+      <a class="logo text-lg font-bold text-slate-900" href="index.html">Abdelkarim Naji</a>
+      <button class="nav-toggle md:hidden p-2 rounded-md" id="nav-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Ouvrir le menu">☰</button>
+      <ul id="primary-navigation" class="nav-links flex items-center gap-3" data-visible="false">
+        <li><a class="text-sm font-medium text-gray-600 hover:text-cyan-500 rounded-md px-2 py-1" href="home.html">Accueil</a></li>
+        <li><a class="text-sm font-medium text-gray-600 hover:text-cyan-500 rounded-md px-2 py-1" href="about.html">À propos</a></li>
+        <li><a class="text-sm font-medium text-gray-600 hover:text-cyan-500 rounded-md px-2 py-1" href="projects.html" aria-current="page">Projets</a></li>
+        <li><a class="text-sm font-medium text-gray-600 hover:text-cyan-500 rounded-md px-2 py-1" href="education.html">Éducation</a></li>
+        <li><a class="text-sm font-medium text-gray-600 hover:text-cyan-500 rounded-md px-2 py-1" href="contact.html">Contact</a></li>
       </ul>
-      <button id="theme-toggle" class="theme-toggle" aria-label="Basculer le thème">🌙</button>
+      <button id="theme-toggle" class="theme-toggle ml-3 p-2 rounded-md" aria-label="Basculer le thème">🌙</button>
     </nav>
   </header>
 
