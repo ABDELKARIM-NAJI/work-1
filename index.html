@@ -8,15 +8,11 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="src/DSC_9240 copie.jpg" type="image/x-icon">
 
-     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-<style type="text/tailwindcss">
-      @theme {
-        --color-clifford: #da373d;
-      }
-    </style> 
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss"></style>
 
 
-     
+
 </head>
 
 <body>
@@ -26,7 +22,8 @@
         <nav class="nav container" role="navigation" aria-label="Navigation principale">
 
             <a class="logo" href="index.html">Abdelkarim Naji</a>
-            <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Ouvrir le menu">☰</button>
+            <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="primary-navigation"
+                aria-label="Ouvrir le menu">☰</button>
             <ul id="primary-navigation" class="nav-links" data-visible="false">
                 <li><a href="home.html">Accueil</a></li>
                 <li><a href="about.html">À propos</a></li>
@@ -44,7 +41,8 @@
                 <p class="hello">Bonjour, je suis</p>
                 <h1 id="home-title" class="hero-name">Abdelkarim Naji</h1>
                 <p class="hero-sub">Développeur web — Créatif & passionné</p>
-                <img class="hero-avatar" src="src/DSC_9240 copie.jpg" alt="Photo d'Abdelkarim" loading="lazy" width="180" height="180">
+                <img class="hero-avatar" src="src/DSC_9240 copie.jpg" alt="Photo d'Abdelkarim" loading="lazy"
+                    width="180" height="180">
                 <div class="hero-cta">
                     <a class="btn" href="projects.html">Voir mes projets</a>
                     <a class="btn ghost" href="contact.html">Me contacter</a>
@@ -93,11 +91,11 @@
     <button id="back-to-top" class="back-to-top" aria-label="Retour en haut" aria-hidden="true">↑</button>
 
     <div id="project-modal" class="project-modal" role="dialog" aria-modal="true" aria-hidden="true">
-      <div class="project-modal-content" role="document">
-        <button class="project-modal-close" aria-label="Fermer">✕</button>
-        <h3 id="modal-title"></h3>
-        <p id="modal-desc"></p>
-      </div>
+        <div class="project-modal-content" role="document">
+            <button class="project-modal-close" aria-label="Fermer">✕</button>
+            <h3 id="modal-title"></h3>
+            <p id="modal-desc"></p>
+        </div>
     </div>
 
     <script src="script.js" defer></script>
