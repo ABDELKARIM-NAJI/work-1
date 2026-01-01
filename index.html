@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Portfolio — Abdelkarim Naji</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="src/DSC_9240 copie.jpg" type="image/x-icon">
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -68,17 +69,17 @@
                 <article class="project">
                     <h3>Portfolio moderne</h3>
                     <p class="subtle">Refonte responsive avec animations légères et focus accessibilité.</p>
-                    <div class="row" style="margin-top:12px;"><a class="btn" href="projects.html">Voir</a></div>
+                    <div class="row" style="margin-top:12px;"><a class="btn project-open" role="button" href="projects.html" aria-haspopup="dialog" aria-controls="project-modal" data-title="Portfolio moderne" data-desc="Refonte responsive avec animations légères et focus accessibilité.">Voir</a></div>
                 </article>
                 <article class="project">
                     <h3>Application de tâches</h3>
                     <p class="subtle">Gestion d’états, stockage local et interface épurée.</p>
-                    <div class="row" style="margin-top:12px;"><a class="btn" href="projects.html">Voir</a></div>
+                    <div class="row" style="margin-top:12px;"><a class="btn project-open" role="button" href="projects.html" aria-haspopup="dialog" aria-controls="project-modal" data-title="Application de tâches" data-desc="Gestion d’états, stockage local et interface épurée.">Voir</a></div>
                 </article>
                 <article class="project">
                     <h3>Site e‑commerce</h3>
                     <p class="subtle">Catalogue, panier et paiement intégré — optimisation performance.</p>
-                    <div class="row" style="margin-top:12px;"><a class="btn" href="projects.html">Voir</a></div>
+                    <div class="row" style="margin-top:12px;"><a class="btn project-open" role="button" href="projects.html" aria-haspopup="dialog" aria-controls="project-modal" data-title="Site e‑commerce" data-desc="Catalogue, panier et paiement intégré — optimisation performance.">Voir</a></div>
                 </article>
             </div>
         </section>
@@ -90,7 +91,7 @@
 
     <button id="back-to-top" class="back-to-top" aria-label="Retour en haut" aria-hidden="true">↑</button>
 
-    <div id="project-modal" class="project-modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div id="project-modal" class="project-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-title">
         <div class="project-modal-content" role="document">
             <button class="project-modal-close" aria-label="Fermer">✕</button>
             <h3 id="modal-title"></h3>
