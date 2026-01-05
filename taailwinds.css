@@ -73,6 +73,9 @@
 .hero::before{ content:""; position:absolute; right:-10px; top:8%; width:100px; height:100px; background:rgba(239,68,68,0.06); transform:rotate(12deg); z-index:0; border-radius:12px; animation:bob 6s ease-in-out infinite; box-shadow:0 12px 28px rgba(16,24,40,0.04); }
 .hero::after{ content:""; position:absolute; right:-50px; top:22%; width:25px; height:25px; background:rgba(239,68,68,0.09); transform:rotate(-10deg); border-radius:6px; z-index:0; animation:bob 6s ease-in-out infinite; box-shadow:0 6px 14px rgba(16,24,40,0.03); }
 
+/* Animation delays */
+.animation-delay-1000 { animation-delay: 1s; }
+
 /* Respect reduced motion */
 @media (prefers-reduced-motion: reduce){ .hero::before, .project::before, .edu-card, .edu-card.reveal{ animation:none; transition:none; } .edu-card:hover{ transform:none; } }
 
