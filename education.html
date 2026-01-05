@@ -1,68 +1,233 @@
 <!doctype html>
 <html lang="fr">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Éducation — Abdelkarim Naji</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <style type="text/tailwindcss"></style>
-  <script>
-    (async function(){
-      try{
-        const r = await fetch('taailwinds.css');
-        if(!r.ok) return console.warn('Impossible de charger taailwinds.css');
-        const txt = await r.text();
-        const s = document.querySelector('style[type="text/tailwindcss"]');
-        if(s) s.textContent = txt;
-      }catch(e){console.warn('Erreur chargement taailwinds.css', e)}
-    })();
-  </script>
-  </head>
-  <body class="bg-gray-50 text-slate-900 font-sans antialiased">
-  <a class="skip-link" href="#main-content">Aller au contenu</a>
-  <header class="site-header bg-white/60 backdrop-blur py-2 sticky top-0 z-50 border-b">
-    <nav class="nav container flex items-center justify-between gap-4 max-w-4xl mx-auto px-4" role="navigation" aria-label="Navigation principale">
-      <a class="logo text-lg font-bold text-slate-900" href="index.html">Abdelkarim Naji</a>
-      <button class="nav-toggle md:hidden p-2 rounded-md" id="nav-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Ouvrir le menu">☰</button>
-      <ul id="primary-navigation" class="nav-links flex items-center gap-3" data-visible="false">
-        <li><a class="text-sm font-medium text-gray-600 hover:text-cyan-500 rounded-md px-2 py-1" href="home.html">Accueil</a></li>
-        <li><a class="text-sm font-medium text-gray-600 hover:text-cyan-500 rounded-md px-2 py-1" href="about.html">À propos</a></li>
-        <li><a class="text-sm font-medium text-gray-600 hover:text-cyan-500 rounded-md px-2 py-1" href="projects.html">Projets</a></li>
-        <li><a class="text-sm font-medium text-gray-600 hover:text-cyan-500 rounded-md px-2 py-1" href="education.html" aria-current="page">Éducation</a></li>
-        <li><a class="text-sm font-medium text-gray-600 hover:text-cyan-500 rounded-md px-2 py-1" href="contact.html">Contact</a></li>
-      </ul>
-      <button id="theme-toggle" class="theme-toggle ml-3 p-2 rounded-md" aria-label="Basculer le thème">🌙</button>
-    </nav>
-  </header>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Éducation — Abdelkarim Naji</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'mono': ['JetBrains Mono', 'monospace'],
+                        'sans': ['Inter', 'system-ui', 'sans-serif']
+                    },
+                    colors: {
+                        'dev-dark': '#0f172a',
+                        'dev-darker': '#020617',
+                        'dev-accent': '#06b6d4',
+                        'dev-secondary': '#10b981',
+                        'dev-warning': '#f59e0b'
+                    },
+                    animation: {
+                        'code-flicker': 'flicker 2s infinite',
+                        'terminal-cursor': 'cursor 1s infinite'
+                    },
+                    keyframes: {
+                        flicker: {
+                            '0%, 100%': { opacity: '1' },
+                            '50%': { opacity: '0.5' }
+                        },
+                        cursor: {
+                            '0%, 50%': { opacity: '1' },
+                            '51%, 100%': { opacity: '0' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
 
-  <main class="section education container">
-    <h1>Éducation</h1>
-    <div class="education-grid">
-      <article class="edu-card">
-        <h3>Licence en Ingénierie Industrielle</h3>
-        <p class="edu-sub">FST Settat — 2022</p>
-        <p>Licence en Ingénierie Industrielle, spécialité génie mécanique.</p>
-      </article>
-      <article class="edu-card">
-        <h3>Technicien Spécialisé en Maintenance des Machines-Outils</h3>
-        <p class="edu-sub">Institut Technique — 2019</p>
-        <p>Formation axée sur la maintenance préventive et corrective des machines-outils.</p>
-      </article>
-      <article class="edu-card">
-        <h3>Baccalauréat — SVT</h3>
-        <p class="edu-sub">2016</p>
-        <p>Baccalauréat série Sciences de la Vie et de la Terre (SVT).</p>
-      </article>
-    </div>
-  </main>
+<body class="bg-gradient-to-br from-dev-darker via-dev-dark to-slate-900 text-gray-100 font-sans min-h-screen">
+    <a class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-dev-accent text-white px-4 py-2 rounded-lg z-50" href="#main-content">Aller au contenu</a>
 
-  <footer class="site-footer container">
-    <p>© <span id="year"></span> Abdelkarim Naji</p>
-  </footer>
+    <!-- Terminal-style Header -->
+    <header class="bg-black/80 backdrop-blur-md border-b border-dev-accent/20 sticky top-0 z-40">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-4">
+                    <div class="flex items-center space-x-2">
+                        <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                        <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                        <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                    </div>
+                    <a href="index.html" class="text-dev-accent font-mono text-lg font-bold hover:text-white transition-colors">
+                        <i class="fas fa-code mr-2"></i>Abdelkarim.dev
+                    </a>
+                </div>
 
-  <button id="back-to-top" class="back-to-top" aria-label="Retour en haut" aria-hidden="true">↑</button>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="home.html" class="text-gray-300 hover:text-dev-accent transition-colors font-medium">Accueil</a>
+                    <a href="about.html" class="text-gray-300 hover:text-dev-accent transition-colors font-medium">À propos</a>
+                    <a href="projects.html" class="text-gray-300 hover:text-dev-accent transition-colors font-medium">Projets</a>
+                    <a href="education.html" class="text-dev-accent border-b-2 border-dev-accent font-medium" aria-current="page">Éducation</a>
+                    <a href="contact.html" class="text-gray-300 hover:text-dev-accent transition-colors font-medium">Contact</a>
+                </div>
 
-  <script src="script.js" defer></script>
+                <button id="theme-toggle" class="p-2 rounded-lg bg-gray-800 hover:bg-gray-700 transition-colors" aria-label="Basculer le thème">
+                    <i class="fas fa-moon text-dev-accent"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- Terminal-style Education Section -->
+        <div class="bg-black/50 backdrop-blur-sm rounded-2xl border border-dev-accent/20 overflow-hidden shadow-2xl">
+            <!-- Terminal Header -->
+            <div class="bg-gray-900 px-6 py-4 border-b border-dev-accent/20">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-terminal text-dev-accent"></i>
+                    <span class="text-dev-accent font-mono text-sm">education@abdelkarim:~$</span>
+                    <span class="text-green-400 font-mono text-sm animate-terminal-cursor">cat education.log</span>
+                </div>
+            </div>
+
+            <!-- Education Content -->
+            <div class="p-8">
+                <div class="text-center mb-12">
+                    <h1 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-dev-accent to-dev-secondary bg-clip-text text-transparent mb-4">
+                        <i class="fas fa-graduation-cap mr-4"></i>Formation & Éducation
+                    </h1>
+                    <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+                        Mon parcours académique et professionnel dans le domaine du développement
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Degree 1 -->
+                    <div class="group bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-6 rounded-xl border border-gray-700 hover:border-dev-accent/50 transition-all duration-300 hover:shadow-lg hover:shadow-dev-accent/10">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-cogs text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-white mb-1">Licence en Ingénierie Industrielle</h3>
+                                <p class="text-dev-accent font-mono text-sm">2022</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-4">FST Settat</p>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Licence en Ingénierie Industrielle, spécialité génie mécanique.
+                            Formation complète en conception, maintenance et optimisation de systèmes industriels.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-4">
+                            <span class="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-xs font-mono">Mécanique</span>
+                            <span class="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-xs font-mono">Industrie</span>
+                        </div>
+                    </div>
+
+                    <!-- Degree 2 -->
+                    <div class="group bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-6 rounded-xl border border-gray-700 hover:border-dev-secondary/50 transition-all duration-300 hover:shadow-lg hover:shadow-dev-secondary/10">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-600 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-tools text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-white mb-1">Technicien Spécialisé</h3>
+                                <p class="text-dev-secondary font-mono text-sm">2019</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-4">Institut Technique</p>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Technicien Spécialisé en Maintenance des Machines-Outils.
+                            Expertise en maintenance préventive et corrective des équipements industriels.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-4">
+                            <span class="px-3 py-1 bg-green-500/20 text-green-300 rounded-full text-xs font-mono">Maintenance</span>
+                            <span class="px-3 py-1 bg-teal-500/20 text-teal-300 rounded-full text-xs font-mono">Technique</span>
+                        </div>
+                    </div>
+
+                    <!-- Degree 3 -->
+                    <div class="group bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-6 rounded-xl border border-gray-700 hover:border-dev-warning/50 transition-all duration-300 hover:shadow-lg hover:shadow-dev-warning/10 md:col-span-2 lg:col-span-1">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-flask text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-white mb-1">Baccalauréat SVT</h3>
+                                <p class="text-dev-warning font-mono text-sm">2016</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-4">Lycée</p>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Baccalauréat série Sciences de la Vie et de la Terre (SVT).
+                            Bases solides en sciences et mathématiques.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-4">
+                            <span class="px-3 py-1 bg-yellow-500/20 text-yellow-300 rounded-full text-xs font-mono">SVT</span>
+                            <span class="px-3 py-1 bg-orange-500/20 text-orange-300 rounded-full text-xs font-mono">Sciences</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills Timeline -->
+                <div class="mt-16">
+                    <h2 class="text-2xl font-bold text-white mb-8 text-center">
+                        <i class="fas fa-code-branch mr-3 text-dev-accent"></i>Évolution des Compétences
+                    </h2>
+                    <div class="relative">
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-dev-accent to-dev-secondary rounded-full"></div>
+                        <div class="space-y-12">
+                            <div class="flex items-center">
+                                <div class="w-1/2 pr-8 text-right">
+                                    <div class="bg-gray-800/50 p-4 rounded-lg border border-gray-700">
+                                        <h3 class="text-dev-accent font-bold">2022 - Aujourd'hui</h3>
+                                        <p class="text-gray-300">Développement Full Stack</p>
+                                    </div>
+                                </div>
+                                <div class="w-4 h-4 bg-dev-accent rounded-full border-4 border-gray-900"></div>
+                                <div class="w-1/2 pl-8"></div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-1/2 pr-8"></div>
+                                <div class="w-4 h-4 bg-dev-secondary rounded-full border-4 border-gray-900"></div>
+                                <div class="w-1/2 pl-8">
+                                    <div class="bg-gray-800/50 p-4 rounded-lg border border-gray-700">
+                                        <h3 class="text-dev-secondary font-bold">2019 - 2022</h3>
+                                        <p class="text-gray-300">Formation Technique</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-1/2 pr-8 text-right">
+                                    <div class="bg-gray-800/50 p-4 rounded-lg border border-gray-700">
+                                        <h3 class="text-dev-warning font-bold">2016</h3>
+                                        <p class="text-gray-300">Baccalauréat</p>
+                                    </div>
+                                </div>
+                                <div class="w-4 h-4 bg-dev-warning rounded-full border-4 border-gray-900"></div>
+                                <div class="w-1/2 pl-8"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-black/50 backdrop-blur-sm border-t border-dev-accent/20 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="text-center">
+                <p class="text-gray-400 font-mono">
+                    <span class="text-dev-accent">©</span> <span id="year"></span>
+                    <span class="text-dev-accent">Abdelkarim.dev</span> | Full Stack Developer
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" class="fixed bottom-6 right-6 w-12 h-12 bg-dev-accent hover:bg-dev-secondary text-black rounded-full shadow-lg hover:shadow-xl transition-all duration-300 opacity-0 pointer-events-none z-50" aria-label="Retour en haut">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js" defer></script>
 </body>
+
 </html>
