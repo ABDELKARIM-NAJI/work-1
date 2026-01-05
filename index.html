@@ -6,13 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Portfolio — Abdelkarim Naji</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
     <link rel="shortcut icon" href="src/DSC_9240 copie.jpg" type="image/x-icon">
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style type="text/tailwindcss"></style>
     <script>
-        (async function(){
+        (async function () {
             try {
                 const r = await fetch('taailwinds.css');
                 if (!r.ok) return console.warn('Impossible de charger taailwinds.css');
@@ -29,79 +31,130 @@
 
 </head>
 
-<body class="bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 text-slate-900 font-sans antialiased min-h-screen">
+<body
+    class="bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 text-slate-900 font-sans antialiased min-h-screen">
     <a class="skip-link" href="#main-content">Aller au contenu</a>
 
     <header class="site-header bg-white/60 backdrop-blur py-2 sticky top-0 z-50 border-b">
-        <nav class="nav container flex items-center justify-between gap-4 max-w-4xl mx-auto px-4" role="navigation" aria-label="Navigation principale">
+        <nav class="nav container flex items-center justify-between gap-4 max-w-4xl mx-auto px-4" role="navigation"
+            aria-label="Navigation principale">
 
             <a class="logo text-lg font-bold text-slate-900" href="index.html">Abdelkarim Naji</a>
-            <button class="nav-toggle md:hidden p-2 rounded-md" id="nav-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Ouvrir le menu">☰</button>
+            <button class="nav-toggle md:hidden p-2 rounded-md" id="nav-toggle" aria-expanded="false"
+                aria-controls="primary-navigation" aria-label="Ouvrir le menu">☰</button>
             <ul id="primary-navigation" class="nav-links flex items-center gap-3" data-visible="false">
-                <li><a class="text-sm font-medium text-gray-600 hover:text-cyan-500 rounded-md px-2 py-1" href="home.html">Accueil</a></li>
-                <li><a class="text-sm font-medium text-gray-600 hover:text-cyan-500 rounded-md px-2 py-1" href="about.html">À propos</a></li>
-                <li><a class="text-sm font-medium text-gray-600 hover:text-cyan-500 rounded-md px-2 py-1" href="projects.html">Projets</a></li>
-                <li><a class="text-sm font-medium text-gray-600 hover:text-cyan-500 rounded-md px-2 py-1" href="education.html">Éducation</a></li>
-                <li><a class="text-sm font-medium text-gray-600 hover:text-cyan-500 rounded-md px-2 py-1" href="contact.html">Contact</a></li>
+                <li><a class="text-sm font-medium text-gray-600 hover:text-cyan-500 rounded-md px-2 py-1"
+                        href="home.html">Accueil</a></li>
+                <li><a class="text-sm font-medium text-gray-600 hover:text-cyan-500 rounded-md px-2 py-1"
+                        href="about.html">À propos</a></li>
+                <li><a class="text-sm font-medium text-gray-600 hover:text-cyan-500 rounded-md px-2 py-1"
+                        href="projects.html">Projets</a></li>
+                <li><a class="text-sm font-medium text-gray-600 hover:text-cyan-500 rounded-md px-2 py-1"
+                        href="education.html">Éducation</a></li>
+                <li><a class="text-sm font-medium text-gray-600 hover:text-cyan-500 rounded-md px-2 py-1"
+                        href="contact.html">Contact</a></li>
             </ul>
-            <button id="theme-toggle" class="theme-toggle ml-3 p-2 rounded-md" aria-label="Basculer le thème">🌙</button>
+            <button id="theme-toggle" class="theme-toggle ml-3 p-2 rounded-md"
+                aria-label="Basculer le thème">🌙</button>
         </nav>
     </header>
 
     <main id="main-content">
-        <section id="home" class="hero py-16 relative overflow-hidden bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10 rounded-3xl mx-4 my-8 shadow-2xl" aria-labelledby="home-title">
+        <section id="home"
+            class="hero py-16 relative overflow-hidden bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10 rounded-3xl mx-4 my-8 shadow-2xl"
+            aria-labelledby="home-title">
             <div class="hero-content container max-w-4xl mx-auto px-4 relative z-10">
                 <div class="backdrop-blur-sm bg-white/20 rounded-2xl p-8 shadow-xl border border-white/20">
                     <p class="hello text-sm text-gray-600 font-semibold uppercase tracking-wider">Bonjour, je suis</p>
-                    <h1 id="home-title" class="hero-name text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent mt-2">Abdelkarim Naji</h1>
+                    <h1 id="home-title"
+                        class="hero-name text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent mt-2">
+                        Abdelkarim Naji</h1>
                     <p class="hero-sub mt-4 text-lg text-gray-700 font-medium">Développeur web — Créatif & passionné</p>
-                    <img class="hero-avatar rounded-full w-48 h-48 object-cover border-4 border-white shadow-2xl mt-8 hover:scale-105 transition-transform duration-300" src="src/DSC_9240 copie.jpg" alt="Photo d'Abdelkarim" loading="lazy" width="192" height="192">
+                    <img class="hero-avatar rounded-full w-48 h-48 object-cover border-4 border-white shadow-2xl mt-8 hover:scale-105 transition-transform duration-300"
+                        src="src/DSC_9240 copie.jpg" alt="Photo d'Abdelkarim" loading="lazy" width="192" height="192">
                     <div class="hero-cta mt-8 flex gap-4 flex-wrap">
-                        <a class="btn inline-block px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 font-semibold" href="projects.html">Voir mes projets</a>
-                        <a class="btn ghost inline-block px-6 py-3 bg-white/20 backdrop-blur-sm border-2 border-white/30 text-gray-800 rounded-xl hover:bg-white/30 transition-all duration-300 font-semibold" href="contact.html">Me contacter</a>
+                        <a class="btn inline-block px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 font-semibold"
+                            href="projects.html">Voir mes projets</a>
+                        <a class="btn ghost inline-block px-6 py-3 bg-white/20 backdrop-blur-sm border-2 border-white/30 text-gray-800 rounded-xl hover:bg-white/30 transition-all duration-300 font-semibold"
+                            href="contact.html">Me contacter</a>
                     </div>
                 </div>
             </div>
             <div class="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-purple-600/20 rounded-3xl"></div>
-            <div class="absolute -top-10 -right-10 w-40 h-40 bg-gradient-to-br from-pink-400 to-red-400 rounded-full opacity-20 animate-pulse"></div>
-            <div class="absolute -bottom-10 -left-10 w-32 h-32 bg-gradient-to-br from-yellow-400 to-orange-400 rounded-full opacity-20 animate-pulse animation-delay-1000"></div>
+            <div
+                class="absolute -top-10 -right-10 w-40 h-40 bg-gradient-to-br from-pink-400 to-red-400 rounded-full opacity-20 animate-pulse">
+            </div>
+            <div
+                class="absolute -bottom-10 -left-10 w-32 h-32 bg-gradient-to-br from-yellow-400 to-orange-400 rounded-full opacity-20 animate-pulse animation-delay-1000">
+            </div>
         </section>
 
-        <section class="section container max-w-4xl mx-auto px-4 py-12 relative overflow-hidden bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10 rounded-3xl mx-4 my-8 shadow-2xl">
+        <section
+            class="section container max-w-4xl mx-auto px-4 py-12 relative overflow-hidden bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10 rounded-3xl mx-4 my-8 shadow-2xl">
             <div class="relative z-10">
                 <h2 class="text-2xl font-semibold">Bienvenue</h2>
-                <p class="mt-2 text-gray-600">Bienvenue sur mon portfolio. Cliquez ci‑dessous pour accéder à chaque page dédiée :</p>
+                <p class="mt-2 text-gray-600">Bienvenue sur mon portfolio. Cliquez ci‑dessous pour accéder à chaque page
+                    dédiée :</p>
                 <div class="row mt-3 flex gap-3 flex-wrap">
-                    <a class="btn inline-block px-4 py-2 bg-cyan-500 text-white rounded-lg" href="about.html">À propos</a>
-                    <a class="btn inline-block px-4 py-2 bg-cyan-500 text-white rounded-lg" href="projects.html">Projets</a>
-                    <a class="btn inline-block px-4 py-2 bg-cyan-500 text-white rounded-lg" href="education.html">Éducation</a>
-                    <a class="btn ghost inline-block px-4 py-2 bg-transparent border border-gray-300 text-gray-800 rounded-lg" href="contact.html">Contact</a>
+                    <a class="btn inline-block px-4 py-2 bg-cyan-500 text-white rounded-lg" href="about.html">À
+                        propos</a>
+                    <a class="btn inline-block px-4 py-2 bg-cyan-500 text-white rounded-lg"
+                        href="projects.html">Projets</a>
+                    <a class="btn inline-block px-4 py-2 bg-cyan-500 text-white rounded-lg"
+                        href="education.html">Éducation</a>
+                    <a class="btn ghost inline-block px-4 py-2 bg-transparent border border-gray-300 text-gray-800 rounded-lg"
+                        href="contact.html">Contact</a>
                 </div>
             </div>
             <div class="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-purple-600/20 rounded-3xl"></div>
         </section>
 
-        <section class="section container max-w-4xl mx-auto px-4 py-16 relative overflow-hidden bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10 rounded-3xl mx-4 my-8 shadow-2xl" id="projects-preview" aria-labelledby="projects-preview-title">
+        <section
+            class="section container max-w-4xl mx-auto px-4 py-16 relative overflow-hidden bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10 rounded-3xl mx-4 my-8 shadow-2xl"
+            id="projects-preview" aria-labelledby="projects-preview-title">
             <div class="relative z-10">
                 <div class="text-center mb-12">
-                    <h2 id="projects-preview-title" class="text-3xl font-bold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent mb-4">Projets en vedette</h2>
-                    <p class="subtle text-lg text-gray-700">Un aperçu de quelques projets récents — cliquez pour voir tous les projets.</p>
+                    <h2 id="projects-preview-title"
+                        class="text-3xl font-bold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent mb-4">
+                        Projets en vedette</h2>
+                    <p class="subtle text-lg text-gray-700">Un aperçu de quelques projets récents — cliquez pour voir
+                        tous les projets.</p>
                 </div>
                 <div class="project-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-                    <article class="project backdrop-blur-sm bg-white/20 p-6 rounded-2xl shadow-xl border border-white/20 hover:bg-white/30 hover:shadow-2xl hover:scale-105 transition-all duration-300 opacity-0">
+                    <article
+                        class="project backdrop-blur-sm bg-white/20 p-6 rounded-2xl shadow-xl border border-white/20 hover:bg-white/30 hover:shadow-2xl hover:scale-105 transition-all duration-300 opacity-0">
                         <h3 class="text-xl font-semibold text-gray-800 mb-3">Portfolio moderne</h3>
-                        <p class="subtle text-gray-600 leading-relaxed">Refonte responsive avec animations légères et focus accessibilité.</p>
-                        <div class="row mt-4"><a class="btn project-open inline-block px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 font-medium" role="button" href="projects.html" aria-haspopup="dialog" aria-controls="project-modal" data-title="Portfolio moderne" data-desc="Refonte responsive avec animations légères et focus accessibilité.">Voir</a></div>
+                        <p class="subtle text-gray-600 leading-relaxed">Refonte responsive avec animations légères et
+                            focus accessibilité.</p>
+                        <div class="row mt-4"><a
+                                class="btn project-open inline-block px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 font-medium"
+                                role="button" href="projects.html" aria-haspopup="dialog" aria-controls="project-modal"
+                                data-title="Portfolio moderne"
+                                data-desc="Refonte responsive avec animations légères et focus accessibilité.">Voir</a>
+                        </div>
                     </article>
-                    <article class="project backdrop-blur-sm bg-white/20 p-6 rounded-2xl shadow-xl border border-white/20 hover:bg-white/30 hover:shadow-2xl hover:scale-105 transition-all duration-300 opacity-0">
+                    <article
+                        class="project backdrop-blur-sm bg-white/20 p-6 rounded-2xl shadow-xl border border-white/20 hover:bg-white/30 hover:shadow-2xl hover:scale-105 transition-all duration-300 opacity-0">
                         <h3 class="text-xl font-semibold text-gray-800 mb-3">Application de tâches</h3>
-                        <p class="subtle text-gray-600 leading-relaxed">Gestion d’états, stockage local et interface épurée.</p>
-                        <div class="row mt-4"><a class="btn project-open inline-block px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 font-medium" role="button" href="projects.html" aria-haspopup="dialog" aria-controls="project-modal" data-title="Application de tâches" data-desc="Gestion d’états, stockage local et interface épurée.">Voir</a></div>
+                        <p class="subtle text-gray-600 leading-relaxed">Gestion d’états, stockage local et interface
+                            épurée.</p>
+                        <div class="row mt-4"><a
+                                class="btn project-open inline-block px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 font-medium"
+                                role="button" href="projects.html" aria-haspopup="dialog" aria-controls="project-modal"
+                                data-title="Application de tâches"
+                                data-desc="Gestion d’états, stockage local et interface épurée.">Voir</a></div>
                     </article>
-                    <article class="project backdrop-blur-sm bg-white/20 p-6 rounded-2xl shadow-xl border border-white/20 hover:bg-white/30 hover:shadow-2xl hover:scale-105 transition-all duration-300 opacity-0">
+                    <article
+                        class="project backdrop-blur-sm bg-white/20 p-6 rounded-2xl shadow-xl border border-white/20 hover:bg-white/30 hover:shadow-2xl hover:scale-105 transition-all duration-300 opacity-0">
                         <h3 class="text-xl font-semibold text-gray-800 mb-3">Site e‑commerce</h3>
-                        <p class="subtle text-gray-600 leading-relaxed">Catalogue, panier et paiement intégré — optimisation performance.</p>
-                        <div class="row mt-4"><a class="btn project-open inline-block px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 font-medium" role="button" href="projects.html" aria-haspopup="dialog" aria-controls="project-modal" data-title="Site e‑commerce" data-desc="Catalogue, panier et paiement intégré — optimisation performance.">Voir</a></div>
+                        <p class="subtle text-gray-600 leading-relaxed">Catalogue, panier et paiement intégré —
+                            optimisation performance.</p>
+                        <div class="row mt-4"><a
+                                class="btn project-open inline-block px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 font-medium"
+                                role="button" href="projects.html" aria-haspopup="dialog" aria-controls="project-modal"
+                                data-title="Site e‑commerce"
+                                data-desc="Catalogue, panier et paiement intégré — optimisation performance.">Voir</a>
+                        </div>
                     </article>
                 </div>
             </div>
@@ -113,10 +166,15 @@
         <p>© <span id="year"></span> Abdelkarim Naji</p>
     </footer>
 
-    <button id="back-to-top" class="back-to-top fixed right-6 bottom-6 w-11 h-11 rounded-full bg-cyan-500 text-white shadow-lg hidden" aria-label="Retour en haut" aria-hidden="true">↑</button>
+    <button id="back-to-top"
+        class="back-to-top fixed right-6 bottom-6 w-11 h-11 rounded-full bg-cyan-500 text-white shadow-lg hidden"
+        aria-label="Retour en haut" aria-hidden="true">↑</button>
 
-    <div id="project-modal" class="project-modal fixed inset-0 flex items-center justify-center bg-black/50 opacity-0 pointer-events-none" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-title">
-        <div class="project-modal-content bg-white p-5 rounded-xl max-w-3xl w-[min(94%,740px)] shadow-2xl" role="document">
+    <div id="project-modal"
+        class="project-modal fixed inset-0 flex items-center justify-center bg-black/50 opacity-0 pointer-events-none"
+        role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-title">
+        <div class="project-modal-content bg-white p-5 rounded-xl max-w-3xl w-[min(94%,740px)] shadow-2xl"
+            role="document">
             <button class="project-modal-close absolute right-3 top-3" aria-label="Fermer">✕</button>
             <h3 id="modal-title" class="text-xl font-semibold"></h3>
             <p id="modal-desc" class="mt-2 text-gray-600"></p>
