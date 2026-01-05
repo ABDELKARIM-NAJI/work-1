@@ -67,39 +67,45 @@
             <div class="absolute -bottom-10 -left-10 w-32 h-32 bg-gradient-to-br from-yellow-400 to-orange-400 rounded-full opacity-20 animate-pulse animation-delay-1000"></div>
         </section>
 
-        <section class="section container max-w-4xl mx-auto px-4 py-12 bg-white/0">
-            <h2 class="text-2xl font-semibold">Bienvenue</h2>
-            <p class="mt-2 text-gray-600">Bienvenue sur mon portfolio. Cliquez ci‑dessous pour accéder à chaque page dédiée :</p>
-            <div class="row mt-3 flex gap-3 flex-wrap">
-                <a class="btn inline-block px-4 py-2 bg-cyan-500 text-white rounded-lg" href="about.html">À propos</a>
-                <a class="btn inline-block px-4 py-2 bg-cyan-500 text-white rounded-lg" href="projects.html">Projets</a>
-                <a class="btn inline-block px-4 py-2 bg-cyan-500 text-white rounded-lg" href="education.html">Éducation</a>
-                <a class="btn ghost inline-block px-4 py-2 bg-transparent border border-gray-300 text-gray-800 rounded-lg" href="contact.html">Contact</a>
+        <section class="section container max-w-4xl mx-auto px-4 py-12 relative overflow-hidden bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10 rounded-3xl mx-4 my-8 shadow-2xl">
+            <div class="relative z-10">
+                <h2 class="text-2xl font-semibold">Bienvenue</h2>
+                <p class="mt-2 text-gray-600">Bienvenue sur mon portfolio. Cliquez ci‑dessous pour accéder à chaque page dédiée :</p>
+                <div class="row mt-3 flex gap-3 flex-wrap">
+                    <a class="btn inline-block px-4 py-2 bg-cyan-500 text-white rounded-lg" href="about.html">À propos</a>
+                    <a class="btn inline-block px-4 py-2 bg-cyan-500 text-white rounded-lg" href="projects.html">Projets</a>
+                    <a class="btn inline-block px-4 py-2 bg-cyan-500 text-white rounded-lg" href="education.html">Éducation</a>
+                    <a class="btn ghost inline-block px-4 py-2 bg-transparent border border-gray-300 text-gray-800 rounded-lg" href="contact.html">Contact</a>
+                </div>
             </div>
+            <div class="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-purple-600/20 rounded-3xl"></div>
         </section>
 
-        <section class="section container max-w-4xl mx-auto px-4 py-16" id="projects-preview" aria-labelledby="projects-preview-title">
-            <div class="text-center mb-12">
-                <h2 id="projects-preview-title" class="text-3xl font-bold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent mb-4">Projets en vedette</h2>
-                <p class="subtle text-lg text-gray-700">Un aperçu de quelques projets récents — cliquez pour voir tous les projets.</p>
+        <section class="section container max-w-4xl mx-auto px-4 py-16 relative overflow-hidden bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10 rounded-3xl mx-4 my-8 shadow-2xl" id="projects-preview" aria-labelledby="projects-preview-title">
+            <div class="relative z-10">
+                <div class="text-center mb-12">
+                    <h2 id="projects-preview-title" class="text-3xl font-bold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent mb-4">Projets en vedette</h2>
+                    <p class="subtle text-lg text-gray-700">Un aperçu de quelques projets récents — cliquez pour voir tous les projets.</p>
+                </div>
+                <div class="project-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+                    <article class="project backdrop-blur-sm bg-white/20 p-6 rounded-2xl shadow-xl border border-white/20 hover:bg-white/30 hover:shadow-2xl hover:scale-105 transition-all duration-300 opacity-0">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Portfolio moderne</h3>
+                        <p class="subtle text-gray-600 leading-relaxed">Refonte responsive avec animations légères et focus accessibilité.</p>
+                        <div class="row mt-4"><a class="btn project-open inline-block px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 font-medium" role="button" href="projects.html" aria-haspopup="dialog" aria-controls="project-modal" data-title="Portfolio moderne" data-desc="Refonte responsive avec animations légères et focus accessibilité.">Voir</a></div>
+                    </article>
+                    <article class="project backdrop-blur-sm bg-white/20 p-6 rounded-2xl shadow-xl border border-white/20 hover:bg-white/30 hover:shadow-2xl hover:scale-105 transition-all duration-300 opacity-0">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Application de tâches</h3>
+                        <p class="subtle text-gray-600 leading-relaxed">Gestion d’états, stockage local et interface épurée.</p>
+                        <div class="row mt-4"><a class="btn project-open inline-block px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 font-medium" role="button" href="projects.html" aria-haspopup="dialog" aria-controls="project-modal" data-title="Application de tâches" data-desc="Gestion d’états, stockage local et interface épurée.">Voir</a></div>
+                    </article>
+                    <article class="project backdrop-blur-sm bg-white/20 p-6 rounded-2xl shadow-xl border border-white/20 hover:bg-white/30 hover:shadow-2xl hover:scale-105 transition-all duration-300 opacity-0">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Site e‑commerce</h3>
+                        <p class="subtle text-gray-600 leading-relaxed">Catalogue, panier et paiement intégré — optimisation performance.</p>
+                        <div class="row mt-4"><a class="btn project-open inline-block px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 font-medium" role="button" href="projects.html" aria-haspopup="dialog" aria-controls="project-modal" data-title="Site e‑commerce" data-desc="Catalogue, panier et paiement intégré — optimisation performance.">Voir</a></div>
+                    </article>
+                </div>
             </div>
-            <div class="project-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-                <article class="project backdrop-blur-sm bg-white/20 p-6 rounded-2xl shadow-xl border border-white/20 hover:bg-white/30 hover:shadow-2xl hover:scale-105 transition-all duration-300 opacity-0">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Portfolio moderne</h3>
-                    <p class="subtle text-gray-600 leading-relaxed">Refonte responsive avec animations légères et focus accessibilité.</p>
-                    <div class="row mt-4"><a class="btn project-open inline-block px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 font-medium" role="button" href="projects.html" aria-haspopup="dialog" aria-controls="project-modal" data-title="Portfolio moderne" data-desc="Refonte responsive avec animations légères et focus accessibilité.">Voir</a></div>
-                </article>
-                <article class="project backdrop-blur-sm bg-white/20 p-6 rounded-2xl shadow-xl border border-white/20 hover:bg-white/30 hover:shadow-2xl hover:scale-105 transition-all duration-300 opacity-0">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Application de tâches</h3>
-                    <p class="subtle text-gray-600 leading-relaxed">Gestion d’états, stockage local et interface épurée.</p>
-                    <div class="row mt-4"><a class="btn project-open inline-block px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 font-medium" role="button" href="projects.html" aria-haspopup="dialog" aria-controls="project-modal" data-title="Application de tâches" data-desc="Gestion d’états, stockage local et interface épurée.">Voir</a></div>
-                </article>
-                <article class="project backdrop-blur-sm bg-white/20 p-6 rounded-2xl shadow-xl border border-white/20 hover:bg-white/30 hover:shadow-2xl hover:scale-105 transition-all duration-300 opacity-0">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Site e‑commerce</h3>
-                    <p class="subtle text-gray-600 leading-relaxed">Catalogue, panier et paiement intégré — optimisation performance.</p>
-                    <div class="row mt-4"><a class="btn project-open inline-block px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 font-medium" role="button" href="projects.html" aria-haspopup="dialog" aria-controls="project-modal" data-title="Site e‑commerce" data-desc="Catalogue, panier et paiement intégré — optimisation performance.">Voir</a></div>
-                </article>
-            </div>
+            <div class="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-purple-600/20 rounded-3xl"></div>
         </section>
     </main>
 
